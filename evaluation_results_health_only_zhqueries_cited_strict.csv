@@ -1,0 +1,196 @@
+id,category,query,node_path,tools_called,routing_correct,factual_score,is_hallucinated_auto,factual_reason,min_max_sim,avg_max_sim,unsupported_ratio,retrieve_context_preview,is_hallucinated_judge,judge_reason,latency_ms,actual_output
+G01,general,"Hello, how are you?",agent,,1,1,false,general_ok,,,,,false,general_ok,2166.07,Hello! I'm here to assist you. How can I help you today?
+G02,general,Hi there!,agent,,1,1,false,general_ok,,,,,false,general_ok,1641.96,"Hello! How can I assist you today? If you have any questions or need help, feel free to ask."
+G03,general,Good morning.,agent,,1,1,false,general_ok,,,,,false,general_ok,1874.42,Good morning! How can I assist you today?
+G04,general,Who am I?,agent,,1,1,false,general_ok,,,,,false,general_ok,1849.35,"I cannot determine your identity based on the information provided. If you have any specific questions or need information from a document, please let me know!"
+G05,general,How is the weather today?,agent,,1,1,false,general_ok,,,,,false,general_ok,1503.61,"I'm sorry, I can't provide the current weather information."
+G06,general,Thank you for your help.,agent,,1,1,false,general_ok,,,,,false,general_ok,1484.31,"You're welcome! If you have any more questions or need further assistance, feel free to ask."
+G07,general,What can you do?,agent,,1,1,false,general_ok,,,,,false,general_ok,2394.19,"I am equipped to assist with two main tasks: retrieving information from health records and calculating the product of two numbers. If you have a specific question about health records or need a multiplication calculation, feel free to ask!"
+G08,general,Tell me a short joke.,agent,,1,1,false,general_ok,,,,,false,general_ok,1402.83,Why don't scientists trust atoms? Because they make up everything!
+G09,general,Goodbye.,agent,,1,1,false,general_ok,,,,,false,general_ok,1839.03,"Goodbye! If you have any more questions in the future, feel free to ask. Have a great day!"
+G10,general,How are you today?,agent,,1,1,false,general_ok,,,,,false,general_ok,1631.23,"I'm just a virtual assistant, but thank you for asking! How can I assist you today?"
+G11,general,What is your name?,agent,,1,1,false,general_ok,,,,,false,general_ok,1565.43,"I'm an intelligent triage assistant, and I don't have a personal name. How can I assist you today?"
+G12,general,Nice to meet you.,agent,,1,1,false,general_ok,,,,,false,general_ok,1491.67,Nice to meet you too! How can I assist you today?
+G13,general,See you later.,agent,,1,1,false,general_ok,,,,,false,general_ok,1580.08,"Goodbye! If you have any questions in the future, feel free to ask."
+G14,general,Please describe yourself briefly.,agent,,1,1,false,general_ok,,,,,false,general_ok,2004.66,"I am an intelligent triage assistant designed to help analyze user inquiries and match them with the most suitable tools for resolution. If you have any specific questions or need assistance, feel free to ask!"
+G15,general,What day is it?,agent,,1,1,false,general_ok,,,,,false,general_ok,1717.12,"I'm sorry, but I cannot help with determining what day it is. Please check your device's calendar or clock for the current date."
+U01,utility,What is 3 times 4?,agent -> call_tools -> generate,multiply,1,1,false,expected_12_got_12.0,,,,,false,expected_12_got_12.0,2516.35,"3 times 4 is 12.
+
+Evidence:
+- ""12.0"""
+U02,utility,Calculate 15 * 8.,agent -> call_tools -> generate,multiply,1,1,false,expected_120_got_120.0,,,,,false,expected_120_got_120.0,2449.58,"The answer is 120.
+
+Evidence:
+- ""120.0"""
+U03,utility,Multiply 7 and 9.,agent -> call_tools -> generate,multiply,1,1,false,expected_63_got_63.0,,,,,false,expected_63_got_63.0,2599.07,"The result of multiplying 7 and 9 is 63.
+
+Evidence:
+- ""63.0"""
+U04,utility,What is 12 multiplied by 5?,agent -> call_tools -> generate,multiply,1,1,false,expected_60_got_60.0,,,,,false,expected_60_got_60.0,2586.16,"12 multiplied by 5 is 60.
+
+Evidence:
+- ""60.0"""
+U05,utility,What is 6 times 3?,agent -> call_tools -> generate,multiply,1,1,false,expected_18_got_18.0,,,,,false,expected_18_got_18.0,2118.08,"6 times 3 is 18.
+
+Evidence:
+- ""18.0"""
+U06,utility,Calculate 25 times 4.,agent -> call_tools -> generate,multiply,1,1,false,expected_100_got_100.0,,,,,false,expected_100_got_100.0,2638.31,"The answer is 100.
+
+Evidence:
+- ""100.0"""
+U07,utility,What is 11 * 11?,agent -> call_tools -> generate,multiply,1,1,false,expected_121_got_121.0,,,,,false,expected_121_got_121.0,2443.74,"The answer is 121.
+
+Evidence:
+- ""121.0"""
+U08,utility,Multiply 0.5 and 8.,agent -> call_tools -> generate,multiply,1,1,false,expected_4_got_4.0,,,,,false,expected_4_got_4.0,2915.60,"The result of multiplying 0.5 and 8 is 4.0.
+
+Evidence:
+- ""4.0"""
+U09,utility,What is 99 times 1?,agent -> call_tools -> generate,multiply,1,1,false,expected_99_got_99.0,,,,,false,expected_99_got_99.0,2611.92,"99 times 1 is 99.
+
+Evidence:
+- ""99.0"""
+U10,utility,Calculate 13 * 7 for me.,agent -> call_tools -> generate,multiply,1,1,false,expected_91_got_91.0,,,,,false,expected_91_got_91.0,2682.62,"The result of 13 * 7 is 91.
+
+Evidence:
+- ""91.0"""
+U11,utility,What is 20 times 15?,agent -> call_tools -> generate,multiply,1,1,false,expected_300_got_300.0,,,,,false,expected_300_got_300.0,2266.29,"20 times 15 is 300.
+
+Evidence:
+- ""300.0"""
+U12,utility,Multiply 2.5 by 4.,agent -> call_tools -> generate,multiply,1,1,false,expected_10_got_10.0,,,,,false,expected_10_got_10.0,2780.58,"10.0
+
+Evidence:
+- ""10.0"""
+U13,utility,What is 8 times 125?,agent -> call_tools -> generate,multiply,1,1,false,expected_1000_got_1000.0,,,,,false,expected_1000_got_1000.0,2606.21,"8 times 125 is 1000.
+
+Evidence:
+- ""1000.0"""
+U14,utility,Calculate 17 * 3.,agent -> call_tools -> generate,multiply,1,1,false,expected_51_got_51.0,,,,,false,expected_51_got_51.0,2666.84,"17 * 3 equals 51.
+
+Evidence:
+- ""51.0"""
+U15,utility,What is 14 times 6?,agent -> call_tools -> generate,multiply,1,1,false,expected_84_got_84.0,,,,,false,expected_84_got_84.0,2355.50,"The answer is 84.
+
+Evidence:
+- ""84.0"""
+V01,vertical,张三九的基本信息是什么（性别、年龄、职业、地址、联系方式、紧急联系人）？,agent -> call_tools -> grade_documents -> generate,retrieve,1,0,true,not_supported_by_evidence,0.5351,0.5351,1.0000,健康档案 一、基本信息 张三九，男，出生于 1985 年 5 月 20 日，目前 39 岁，已婚，职业为 IT 工程师。 张三九的 血型为 O 型，联系电话为 138-1234-5678，电子邮箱为 zhangsan@example.com，居住在 上海市浦东新区张江路 123 号。 其紧急联系人为妻子李四六，联系电话为 138-8765-4321。 二、医疗历史 张三九在 2005 年被确诊为高血压，自此开始接受降压药物治疗。 2010 年，他被确诊为二 型糖尿病，并开始使用口服降糖药进行管理。 2017 年，张三九被诊断为脂肪肝，医生建议 通过饮食调整和增加运动来改善这一状况。 2022 年，他因腰椎间盘突出接受了微创手术， 术后恢复良好。 此外，张三九对青霉素有过敏反应，曾出现皮疹和呼吸困难。 海鲜会导致轻 度皮肤发痒，表明他对海鲜也有一定的过敏反应。 张三九的家族病史显示，父亲患有高血压 和二型糖尿病，母亲则有甲状腺疾病史。 三、生活方式和习惯 张三九的饮食习惯偏向高脂肪和高糖食品，日常饮食中蔬菜和水果的摄入较少，盐分摄入偏 高。 他的工作繁忙，运动较少，每周仅进行一次轻度运动,true,not_supported_by_evidence,6670.17,"Zhang Sanjiu is a 39-year-old male IT engineer living in Shanghai. His contact number is 138-1234-5678, and his emergency contact is his wife, Li Siliu, at 138-8765-4321.
+
+Evidence:
+1. ""Zhang Sanjiu, male, born on May 20, 1985, currently 39 years old, married, occupation IT engineer.""
+2. ""Contact number is 138-1234-5678... lives in Pudong New Area, Zhangjiang Road, 123, Shanghai.""
+3. ""His emergency contact is his wife Li Siliu, contact number 138-8765-4321."""
+V02,vertical,列出张三九的既往病史和确诊年份。,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.7031,0.7031,0.0000,健康档案 一、基本信息 张三九，男，出生于 1985 年 5 月 20 日，目前 39 岁，已婚，职业为 IT 工程师。 张三九的 血型为 O 型，联系电话为 138-1234-5678，电子邮箱为 zhangsan@example.com，居住在 上海市浦东新区张江路 123 号。 其紧急联系人为妻子李四六，联系电话为 138-8765-4321。 二、医疗历史 张三九在 2005 年被确诊为高血压，自此开始接受降压药物治疗。 2010 年，他被确诊为二 型糖尿病，并开始使用口服降糖药进行管理。 2017 年，张三九被诊断为脂肪肝，医生建议 通过饮食调整和增加运动来改善这一状况。 2022 年，他因腰椎间盘突出接受了微创手术， 术后恢复良好。 此外，张三九对青霉素有过敏反应，曾出现皮疹和呼吸困难。 海鲜会导致轻 度皮肤发痒，表明他对海鲜也有一定的过敏反应。 张三九的家族病史显示，父亲患有高血压 和二型糖尿病，母亲则有甲状腺疾病史。 三、生活方式和习惯 张三九的饮食习惯偏向高脂肪和高糖食品，日常饮食中蔬菜和水果的摄入较少，盐分摄入偏 高。 他的工作繁忙，运动较少，每周仅进行一次轻度运动,false,supported_by_evidence,9672.79,"Zhang Sanjiu's medical history includes the following diagnoses and years: hypertension diagnosed in 2005, type 2 diabetes diagnosed in 2010, fatty liver diagnosed in 2017, and lumbar disc herniation for which he had minimally invasive surgery in 2022.
+
+Evidence:
+1. ""张三九在 2005 年被确诊为高血压，自此开始接受降压药物治疗。""
+2. ""2010 年，他被确诊为二型糖尿病，并开始使用口服降糖药进行管理。""
+3. ""2017 年，张三九被诊断为脂肪肝，医生建议通过饮食调整和增加运动来改善这一状况。""
+4. ""2022 年，他因腰椎间盘突出接受了微创手术，术后恢复良好。"""
+V03,vertical,张三九有哪些过敏史？分别有什么反应？,agent -> call_tools -> grade_documents -> generate,retrieve,1,0,true,not_supported_by_evidence,0.3371,0.3371,1.0000,2. 增加运动量: 张三九每周应至少进行三次中等强度的有氧运动，如快走或跑步，每次至 少 30 分钟。 3. 药物管理: 建议张三九继续遵医嘱服用降压药和降糖药，定期监测血压和血糖水平。 4. 定期随访: 每三个月进行一次血压、血糖和血脂的随访监测，并每年进行一次全面体检， 以动态评估健康状况。 5. 生活方式调整: 张三九需要改善睡眠质量，减少压力，尝试冥想或其他放松技巧，以提 升整体生活质量。 七、长期目标 1. 体重管理: 将体重指数控制在 24 以内，减少腹部脂肪堆积。 2. 血糖管理: 将空腹血糖控制在 6.0 毫摩尔/升以下，餐后 2 小时血糖控制在 7.8 毫摩尔/升 以下。 3. 血压管理: 将血压控制在 120/80 毫米汞柱以下，以降低心血管疾病风险。 4. 改善生活质量: 通过增加运动频率和强度、改善睡眠质量、减轻工作压力等措施，提升 生活质量。 健康档案 一、基本信息 患者姓名为李四六，女性，出生于 1990 年 3 月 15 日，目前 34 岁，已婚，职业为小学教师。 李四六的血型为 A 型，她的联系电话为 139-9876-5432，电子邮箱为 lisi@e,true,not_supported_by_evidence,9032.12,"Zhang Sanjiu has a history of allergies to penicillin and seafood. His reactions include rashes and breathing difficulties from penicillin, and mild skin itching from seafood.
+
+Evidence:
+- ""Zhang Sanjiu has an allergic reaction to penicillin, having developed rashes and breathing difficulties.""
+- ""Seafood causes mild skin itching, indicating he has some allergic reaction to seafood."""
+V04,vertical,张三九的家族病史是什么（父亲/母亲分别有哪些疾病史）？,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.6494,0.6494,0.0000,健康档案 一、基本信息 张三九，男，出生于 1985 年 5 月 20 日，目前 39 岁，已婚，职业为 IT 工程师。 张三九的 血型为 O 型，联系电话为 138-1234-5678，电子邮箱为 zhangsan@example.com，居住在 上海市浦东新区张江路 123 号。 其紧急联系人为妻子李四六，联系电话为 138-8765-4321。 二、医疗历史 张三九在 2005 年被确诊为高血压，自此开始接受降压药物治疗。 2010 年，他被确诊为二 型糖尿病，并开始使用口服降糖药进行管理。 2017 年，张三九被诊断为脂肪肝，医生建议 通过饮食调整和增加运动来改善这一状况。 2022 年，他因腰椎间盘突出接受了微创手术， 术后恢复良好。 此外，张三九对青霉素有过敏反应，曾出现皮疹和呼吸困难。 海鲜会导致轻 度皮肤发痒，表明他对海鲜也有一定的过敏反应。 张三九的家族病史显示，父亲患有高血压 和二型糖尿病，母亲则有甲状腺疾病史。 三、生活方式和习惯 张三九的饮食习惯偏向高脂肪和高糖食品，日常饮食中蔬菜和水果的摄入较少，盐分摄入偏 高。 他的工作繁忙，运动较少，每周仅进行一次轻度运动,false,supported_by_evidence,6846.59,"Zhang Sanjiu's family medical history indicates that his father has hypertension and type 2 diabetes, while his mother has a history of thyroid disease.
+
+Evidence:
+1. ""张三九的家族病史显示，父亲患有高血压和二型糖尿病，母亲则有甲状腺疾病史。"""
+V05,vertical,总结张三九的生活方式与习惯（饮食、运动、吸烟、饮酒、睡眠）。,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.6776,0.6776,0.0000,健康档案 一、基本信息 张三九，男，出生于 1985 年 5 月 20 日，目前 39 岁，已婚，职业为 IT 工程师。 张三九的 血型为 O 型，联系电话为 138-1234-5678，电子邮箱为 zhangsan@example.com，居住在 上海市浦东新区张江路 123 号。 其紧急联系人为妻子李四六，联系电话为 138-8765-4321。 二、医疗历史 张三九在 2005 年被确诊为高血压，自此开始接受降压药物治疗。 2010 年，他被确诊为二 型糖尿病，并开始使用口服降糖药进行管理。 2017 年，张三九被诊断为脂肪肝，医生建议 通过饮食调整和增加运动来改善这一状况。 2022 年，他因腰椎间盘突出接受了微创手术， 术后恢复良好。 此外，张三九对青霉素有过敏反应，曾出现皮疹和呼吸困难。 海鲜会导致轻 度皮肤发痒，表明他对海鲜也有一定的过敏反应。 张三九的家族病史显示，父亲患有高血压 和二型糖尿病，母亲则有甲状腺疾病史。 三、生活方式和习惯 张三九的饮食习惯偏向高脂肪和高糖食品，日常饮食中蔬菜和水果的摄入较少，盐分摄入偏 高。 他的工作繁忙，运动较少，每周仅进行一次轻度运动,false,supported_by_evidence,7741.77,"Zhang Sanjiu's lifestyle and habits include a diet high in fat and sugar, with low intake of vegetables and fruits. He exercises minimally, engaging in light physical activity like walking once a week. He does not smoke but drinks alcohol 2 to 3 times a week, consuming about 300 milliliters of beer each time. His average sleep duration is 6 hours per night, and he often feels fatigued.
+
+Evidence:
+1. ""Zhang Sanjiu's diet is high in fat and sugar, with low intake of vegetables and fruits.""
+2. ""He exercises minimally, engaging in light physical activity like walking once a week.""
+3. ""He does not smoke but drinks alcohol 2 to 3 times a week, consuming about 300 milliliters of beer each time.""
+4. ""His average sleep duration is 6 hours per night, and he often feels fatigued."""
+V06,vertical,张三九最近的生命体征有哪些（身高、体重、BMI、血压、心率）？如果记录里没有就说明未找到。,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.6797,0.6797,0.0000,健康档案 一、基本信息 张三九，男，出生于 1985 年 5 月 20 日，目前 39 岁，已婚，职业为 IT 工程师。 张三九的 血型为 O 型，联系电话为 138-1234-5678，电子邮箱为 zhangsan@example.com，居住在 上海市浦东新区张江路 123 号。 其紧急联系人为妻子李四六，联系电话为 138-8765-4321。 二、医疗历史 张三九在 2005 年被确诊为高血压，自此开始接受降压药物治疗。 2010 年，他被确诊为二 型糖尿病，并开始使用口服降糖药进行管理。 2017 年，张三九被诊断为脂肪肝，医生建议 通过饮食调整和增加运动来改善这一状况。 2022 年，他因腰椎间盘突出接受了微创手术， 术后恢复良好。 此外，张三九对青霉素有过敏反应，曾出现皮疹和呼吸困难。 海鲜会导致轻 度皮肤发痒，表明他对海鲜也有一定的过敏反应。 张三九的家族病史显示，父亲患有高血压 和二型糖尿病，母亲则有甲状腺疾病史。 三、生活方式和习惯 张三九的饮食习惯偏向高脂肪和高糖食品，日常饮食中蔬菜和水果的摄入较少，盐分摄入偏 高。 他的工作繁忙，运动较少，每周仅进行一次轻度运动,false,supported_by_evidence,6789.78,"Zhang Sanjiu's recent vital signs include a height of 175 cm, weight of 78 kg, BMI of 25.5, blood pressure of 135/85 mmHg, and a heart rate of 78 beats per minute.
+
+Evidence:
+1. ""His height is 175 cm, weight is 78 kg, and BMI is 25.5.""
+2. ""Blood pressure measurement result is 135/85 mmHg.""
+3. ""Heart rate is 78 beats per minute, within the normal range."""
+V07,vertical,张三九的血糖和血脂化验结果分别是多少？哪些指标异常？,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.7330,0.7330,0.0000,他的腰围为 92 厘米，略高于健康范围。 血压测量结果为 135/85 毫米汞柱，属于轻度高血压范围。 心率为每分钟 78 次，处于正常 范围。 在实验室检查中，张三九的空腹血糖为 6.8 毫摩尔/升，略高于正常范围； 餐后 2 小时血糖 为 8.9 毫摩尔/升，也高于正常标准。 血脂检查结果显示，总胆固醇为 5.2 毫摩尔/升，处于 正常范围，甘油三酯为 1.8 毫摩尔/升，略高于正常，低密度脂蛋白（LDL）为 3.4 毫摩尔/ 升，略高。 肝功能检查显示，谷丙转氨酶（ALT）和谷草转氨酶（AST）的水平正常，分别 为 28 和 25 单位/升。 肾功能检查显示，肌酐、尿素和尿酸水平均处于正常范围内。 其他检查结果中，心电图显示张三九的心脏功能正常，未发现异常心律。 胸片检查结果显示 其肺部和胸腔无异常，腹部超声检查显示脂肪肝轻度增加，但未发现其他异常。 五、健康风险评估 根据张三九的健康档案及最新体检结果，存在以下健康风险： 1. 心血管疾病风险: 由于血压偏高和血脂异常，张三九存在较高的心血管疾病风险。 建议 进一步控制血压和血脂水平。 2. 糖尿病管理不足: 张三九的血糖控制不,false,supported_by_evidence,8917.57,"Zhang Sanjiu's blood glucose and lipid test results show that his fasting blood glucose is 6.8 mmol/L and his 2-hour postprandial blood glucose is 8.9 mmol/L, both slightly higher than normal. His total cholesterol is 5.2 mmol/L (normal), triglycerides are 1.8 mmol/L (slightly high), and LDL is 3.4 mmol/L (slightly high). The abnormal indicators are fasting blood glucose, postprandial blood glucose, triglycerides, and LDL.
+
+Evidence:
+1. ""空腹血糖为 6.8 毫摩尔/升，略高于正常范围；餐后 2 小时血糖为 8.9 毫摩尔/升，也高于正常标准。""
+2. ""总胆固醇为 5.2 毫摩尔/升，处于正常范围，甘油三酯为 1.8 毫摩尔/升，略高于正常，低密度脂蛋白（LDL）为 3.4 毫摩尔/升，略高。""
+
+I cannot find this information in the records."
+V08,vertical,张三九有哪些影像或检查结果（心电图、胸片、腹部超声等）？请概括结论。,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.6338,0.6338,0.0000,他的腰围为 92 厘米，略高于健康范围。 血压测量结果为 135/85 毫米汞柱，属于轻度高血压范围。 心率为每分钟 78 次，处于正常 范围。 在实验室检查中，张三九的空腹血糖为 6.8 毫摩尔/升，略高于正常范围； 餐后 2 小时血糖 为 8.9 毫摩尔/升，也高于正常标准。 血脂检查结果显示，总胆固醇为 5.2 毫摩尔/升，处于 正常范围，甘油三酯为 1.8 毫摩尔/升，略高于正常，低密度脂蛋白（LDL）为 3.4 毫摩尔/ 升，略高。 肝功能检查显示，谷丙转氨酶（ALT）和谷草转氨酶（AST）的水平正常，分别 为 28 和 25 单位/升。 肾功能检查显示，肌酐、尿素和尿酸水平均处于正常范围内。 其他检查结果中，心电图显示张三九的心脏功能正常，未发现异常心律。 胸片检查结果显示 其肺部和胸腔无异常，腹部超声检查显示脂肪肝轻度增加，但未发现其他异常。 五、健康风险评估 根据张三九的健康档案及最新体检结果，存在以下健康风险： 1. 心血管疾病风险: 由于血压偏高和血脂异常，张三九存在较高的心血管疾病风险。 建议 进一步控制血压和血脂水平。 2. 糖尿病管理不足: 张三九的血糖控制不,false,supported_by_evidence,7478.29,"Zhang Sanjiu's imaging and examination results show that his heart function is normal with no abnormal heart rhythms according to the electrocardiogram. His chest X-ray indicates no abnormalities in the lungs and chest cavity, while the abdominal ultrasound reveals a mild increase in fatty liver but no other abnormalities.
+
+Evidence:
+1. ""心电图显示张三九的心脏功能正常，未发现异常心律。""
+2. ""胸片检查结果显示其肺部和胸腔无异常，腹部超声检查显示脂肪肝轻度增加，但未发现其他异常。"""
+V09,vertical,张三九有哪些治疗或手术记录？分别发生在什么时间？,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.6622,0.6622,0.0000,健康档案 一、基本信息 张三九，男，出生于 1985 年 5 月 20 日，目前 39 岁，已婚，职业为 IT 工程师。 张三九的 血型为 O 型，联系电话为 138-1234-5678，电子邮箱为 zhangsan@example.com，居住在 上海市浦东新区张江路 123 号。 其紧急联系人为妻子李四六，联系电话为 138-8765-4321。 二、医疗历史 张三九在 2005 年被确诊为高血压，自此开始接受降压药物治疗。 2010 年，他被确诊为二 型糖尿病，并开始使用口服降糖药进行管理。 2017 年，张三九被诊断为脂肪肝，医生建议 通过饮食调整和增加运动来改善这一状况。 2022 年，他因腰椎间盘突出接受了微创手术， 术后恢复良好。 此外，张三九对青霉素有过敏反应，曾出现皮疹和呼吸困难。 海鲜会导致轻 度皮肤发痒，表明他对海鲜也有一定的过敏反应。 张三九的家族病史显示，父亲患有高血压 和二型糖尿病，母亲则有甲状腺疾病史。 三、生活方式和习惯 张三九的饮食习惯偏向高脂肪和高糖食品，日常饮食中蔬菜和水果的摄入较少，盐分摄入偏 高。 他的工作繁忙，运动较少，每周仅进行一次轻度运动,false,supported_by_evidence,6384.08,"Zhang Sanjiu has a record of undergoing a minimally invasive surgery for a lumbar disc herniation in 2022. Additionally, he has been on medication for hypertension since 2005 and for type 2 diabetes since 2010.
+
+Evidence:
+1. ""In 2022, he underwent minimally invasive surgery for lumbar disc herniation, with good postoperative recovery.""
+2. ""In 2005, Zhang Sanjiu was diagnosed with hypertension and has since been receiving antihypertensive medication.""
+3. ""In 2010, he was diagnosed with type 2 diabetes and started using oral hypoglycemic drugs for management."""
+V10,vertical,张三九的随访计划或医生建议有哪些？,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.7707,0.7707,0.0000,他的腰围为 92 厘米，略高于健康范围。 血压测量结果为 135/85 毫米汞柱，属于轻度高血压范围。 心率为每分钟 78 次，处于正常 范围。 在实验室检查中，张三九的空腹血糖为 6.8 毫摩尔/升，略高于正常范围； 餐后 2 小时血糖 为 8.9 毫摩尔/升，也高于正常标准。 血脂检查结果显示，总胆固醇为 5.2 毫摩尔/升，处于 正常范围，甘油三酯为 1.8 毫摩尔/升，略高于正常，低密度脂蛋白（LDL）为 3.4 毫摩尔/ 升，略高。 肝功能检查显示，谷丙转氨酶（ALT）和谷草转氨酶（AST）的水平正常，分别 为 28 和 25 单位/升。 肾功能检查显示，肌酐、尿素和尿酸水平均处于正常范围内。 其他检查结果中，心电图显示张三九的心脏功能正常，未发现异常心律。 胸片检查结果显示 其肺部和胸腔无异常，腹部超声检查显示脂肪肝轻度增加，但未发现其他异常。 五、健康风险评估 根据张三九的健康档案及最新体检结果，存在以下健康风险： 1. 心血管疾病风险: 由于血压偏高和血脂异常，张三九存在较高的心血管疾病风险。 建议 进一步控制血压和血脂水平。 2. 糖尿病管理不足: 张三九的血糖控制不,false,supported_by_evidence,11936.46,"Zhang Sanjiu's follow-up plan and doctor's recommendations include dietary control, increased exercise, medication management, and regular follow-ups. Specifically, he is advised to reduce intake of high-sugar and high-fat foods, increase consumption of vegetables and fruits, and control salt intake. He should engage in at least three sessions of moderate-intensity aerobic exercise per week. He is recommended to continue taking antihypertensive and antidiabetic medications as prescribed and monitor blood pressure and blood sugar levels regularly. Follow-up monitoring of blood pressure, blood sugar, and blood lipids should be done every three months, with a comprehensive check-up every year.
+
+Evidence:
+1. ""建议张三九减少高糖、高脂肪食物的摄入，增加蔬菜和水果的摄入量，控制盐分摄入，减少加工食品的使用。""
+2. ""张三九每周应至少进行三次中等强度的有氧运动，如快走或跑步，每次至少 30 分钟。""
+3. ""每三个月进行一次血压、血糖和血脂的随访监测，并每年进行一次全面体检， 以动态评估健康状况。"""
+V11,vertical,李四六的基本信息是什么？她的紧急联系人是谁？,agent -> call_tools -> grade_documents -> generate,retrieve,1,0,true,not_supported_by_evidence,0.3896,0.3896,1.0000,肝功能检查显示，谷丙转氨酶（ALT）为 18 单位/升，谷草转氨酶（AST）为 20 单位/升， 均处于正常范围。 肾功能检查结果显示，肌酐、尿素和尿酸水平均在正常范围内。 此外，李四六的心电图结果显示心律正常，未发现异常。 腹部超声检查未见肝脏或胆囊的明 显异常，肾脏形态正常。 五、健康风险评估 根据李四六的健康档案和最近的体检结果，存在以下健康风险： 1. 心血管疾病风险: 李四六的胆固醇水平偏高，尤其是低密度脂蛋白（LDL），这增加了她 患心血管疾病的风险。 建议继续通过饮食和运动管理胆固醇水平。 2. 潜在糖尿病风险: 虽然李四六目前血糖水平正常，但考虑到她曾有妊娠糖尿病史，未来 可能存在糖尿病风险，建议定期监测血糖。 六、医生建议 1. 胆固醇管理: 建议李四六进一步减少饮食中饱和脂肪和反式脂肪的摄入，增加富含纤维 的食物，如全谷物、蔬菜和水果，并继续保持定期运动习惯，以帮助降低胆固醇水平。 2. 糖尿病预防: 建议李四六定期进行空腹血糖和糖化血红蛋白（HbA1c）检查，尤其是在 体重增加或生活方式改变时，以便及早发现潜在的糖尿病问题。 3. 保持健康生活方式: 李四六应继续,true,not_supported_by_evidence,5807.88,"Li Sixi's basic information includes that she is a 34-year-old female, born on March 15, 1990, married, and works as a primary school teacher. Her emergency contact is her husband, Wang Wu.
+
+Evidence:
+1. ""患者姓名为李四六，女性，出生于 1990 年 3 月 15 日，目前 34 岁，已婚，职业为小学教师。""
+2. ""紧急联系人为她的丈夫王五，联系电话为 139-1234-5678。"""
+V12,vertical,列出李四六的既往病史（如有妊娠相关情况也包含）以及对应年份。,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.6872,0.6872,0.0000,用药。 2018 年: 李四六在怀孕期间被诊断为妊娠糖尿病，产后血糖水平恢复正常，但仍需定期 监测血糖。 2020 年: 李四六在一次例行体检中发现胆固醇偏高，医生建议她通过饮食控制和增加运 动来管理胆固醇水平。 手术史: 李四六无重大手术史。 过敏史: 药物过敏: 李四六对阿司匹林过敏，曾出现皮疹和轻度呼吸困难。 食物过敏: 李四六对坚果过敏，食用后会导致口腔肿胀和皮肤发痒。 家族病史: 父亲: 高血压和冠心病。 母亲: 无重大疾病史。 三、生活方式和习惯 李四六的生活方式健康，饮食习惯以清淡为主，平时注重均衡摄入蔬菜、水果和蛋白质，少 食高脂肪和高糖食物。 李四六保持每周三次的有氧运动，如跑步和瑜伽，每次约 45 分钟。 她没有吸烟史，也很少饮酒，仅在社交场合偶尔饮用少量红酒。 李四六的睡眠质量较好，每 晚平均睡眠时间为 7 至 8 小时。 四、体检与化验结果 李四六最近一次体检是在 2024 年 7 月 20 日，结果显示她的身高为 162 厘米，体重为 58 公斤，体重指数（BMI）为 22.1，处于正常范围内。 她的血压为 120/75 毫米汞柱，属于正 常范围，心率为每分钟,false,supported_by_evidence,7945.04,"Li Sixi's past medical history includes hyperthyroidism, gestational diabetes, and high cholesterol. In 2015, she was treated for hyperthyroidism with medication and has since stabilized. In 2018, during pregnancy, she was diagnosed with gestational diabetes, which normalized postpartum but requires regular monitoring. In 2020, she was found to have high cholesterol and was advised to manage it through diet and exercise.
+
+Evidence:
+1. ""2015 年: 李四六因甲状腺功能亢进接受了抗甲状腺药物治疗，病情稳定后目前已经停止用药。""
+2. ""2018 年: 李四六在怀孕期间被诊断为妊娠糖尿病，产后血糖水平恢复正常，但仍需定期监测血糖。""
+3. ""2020 年: 李四六在一次例行体检中发现胆固醇偏高，医生建议她通过饮食控制和增加运动来管理胆固醇水平。"""
+V13,vertical,李四六有哪些过敏史（药物/食物）？分别有什么反应？,agent -> call_tools -> grade_documents -> generate,retrieve,1,0,true,not_supported_by_evidence,0.4235,0.4235,1.0000,用药。 2018 年: 李四六在怀孕期间被诊断为妊娠糖尿病，产后血糖水平恢复正常，但仍需定期 监测血糖。 2020 年: 李四六在一次例行体检中发现胆固醇偏高，医生建议她通过饮食控制和增加运 动来管理胆固醇水平。 手术史: 李四六无重大手术史。 过敏史: 药物过敏: 李四六对阿司匹林过敏，曾出现皮疹和轻度呼吸困难。 食物过敏: 李四六对坚果过敏，食用后会导致口腔肿胀和皮肤发痒。 家族病史: 父亲: 高血压和冠心病。 母亲: 无重大疾病史。 三、生活方式和习惯 李四六的生活方式健康，饮食习惯以清淡为主，平时注重均衡摄入蔬菜、水果和蛋白质，少 食高脂肪和高糖食物。 李四六保持每周三次的有氧运动，如跑步和瑜伽，每次约 45 分钟。 她没有吸烟史，也很少饮酒，仅在社交场合偶尔饮用少量红酒。 李四六的睡眠质量较好，每 晚平均睡眠时间为 7 至 8 小时。 四、体检与化验结果 李四六最近一次体检是在 2024 年 7 月 20 日，结果显示她的身高为 162 厘米，体重为 58 公斤，体重指数（BMI）为 22.1，处于正常范围内。 她的血压为 120/75 毫米汞柱，属于正 常范围，心率为每分钟,true,not_supported_by_evidence,5923.07,"Li Sixi has allergies to aspirin and nuts. She experiences rashes and mild breathing difficulties from aspirin, and oral swelling and skin itching from nuts.
+
+Evidence:
+1. ""药物过敏: 李四六对阿司匹林过敏，曾出现皮疹和轻度呼吸困难。""
+2. ""食物过敏: 李四六对坚果过敏，食用后会导致口腔肿胀和皮肤发痒。"""
+V14,vertical,总结李四六的生活方式与风险因素。,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.6678,0.6678,0.0000,肝功能检查显示，谷丙转氨酶（ALT）为 18 单位/升，谷草转氨酶（AST）为 20 单位/升， 均处于正常范围。 肾功能检查结果显示，肌酐、尿素和尿酸水平均在正常范围内。 此外，李四六的心电图结果显示心律正常，未发现异常。 腹部超声检查未见肝脏或胆囊的明 显异常，肾脏形态正常。 五、健康风险评估 根据李四六的健康档案和最近的体检结果，存在以下健康风险： 1. 心血管疾病风险: 李四六的胆固醇水平偏高，尤其是低密度脂蛋白（LDL），这增加了她 患心血管疾病的风险。 建议继续通过饮食和运动管理胆固醇水平。 2. 潜在糖尿病风险: 虽然李四六目前血糖水平正常，但考虑到她曾有妊娠糖尿病史，未来 可能存在糖尿病风险，建议定期监测血糖。 六、医生建议 1. 胆固醇管理: 建议李四六进一步减少饮食中饱和脂肪和反式脂肪的摄入，增加富含纤维 的食物，如全谷物、蔬菜和水果，并继续保持定期运动习惯，以帮助降低胆固醇水平。 2. 糖尿病预防: 建议李四六定期进行空腹血糖和糖化血红蛋白（HbA1c）检查，尤其是在 体重增加或生活方式改变时，以便及早发现潜在的糖尿病问题。 3. 保持健康生活方式: 李四六应继续,false,supported_by_evidence,7290.37,"Li Sixi's lifestyle is generally healthy, characterized by a balanced diet, regular exercise, and good sleep habits. However, she has certain risk factors, including high cholesterol levels and a history of gestational diabetes, which may increase her risk for cardiovascular diseases and diabetes in the future.
+
+Evidence:
+1. ""Li Sixi's lifestyle is healthy, with a diet mainly consisting of vegetables, fruits, and proteins, and she avoids high-fat and high-sugar foods.""
+2. ""She maintains aerobic exercise three times a week, such as running and yoga, about 45 minutes each time.""
+3. ""Li Sixi's cholesterol levels are high, especially low-density lipoprotein (LDL), which increases her risk of cardiovascular disease.""
+4. ""Li Sixi was diagnosed with gestational diabetes during pregnancy, and although her blood sugar levels returned to normal postpartum, regular monitoring is still needed."""
+V15,vertical,李四六的血糖/血脂化验结果是什么？哪些异常？,agent -> call_tools -> grade_documents -> generate,retrieve,1,0,true,not_supported_by_evidence,0.6109,0.6109,1.0000,用药。 2018 年: 李四六在怀孕期间被诊断为妊娠糖尿病，产后血糖水平恢复正常，但仍需定期 监测血糖。 2020 年: 李四六在一次例行体检中发现胆固醇偏高，医生建议她通过饮食控制和增加运 动来管理胆固醇水平。 手术史: 李四六无重大手术史。 过敏史: 药物过敏: 李四六对阿司匹林过敏，曾出现皮疹和轻度呼吸困难。 食物过敏: 李四六对坚果过敏，食用后会导致口腔肿胀和皮肤发痒。 家族病史: 父亲: 高血压和冠心病。 母亲: 无重大疾病史。 三、生活方式和习惯 李四六的生活方式健康，饮食习惯以清淡为主，平时注重均衡摄入蔬菜、水果和蛋白质，少 食高脂肪和高糖食物。 李四六保持每周三次的有氧运动，如跑步和瑜伽，每次约 45 分钟。 她没有吸烟史，也很少饮酒，仅在社交场合偶尔饮用少量红酒。 李四六的睡眠质量较好，每 晚平均睡眠时间为 7 至 8 小时。 四、体检与化验结果 李四六最近一次体检是在 2024 年 7 月 20 日，结果显示她的身高为 162 厘米，体重为 58 公斤，体重指数（BMI）为 22.1，处于正常范围内。 她的血压为 120/75 毫米汞柱，属于正 常范围，心率为每分钟,true,not_supported_by_evidence,7012.32,"Li Sixiu's blood sugar is normal, but her cholesterol levels are slightly elevated. Specifically, her fasting blood sugar is 5.2 mmol/L, which is within the normal range. However, her total cholesterol is 5.8 mmol/L and her LDL cholesterol is 3.2 mmol/L, both slightly above the normal range.
+
+Evidence:
+1. ""Her fasting blood sugar is 5.2 mmol/L, normal.""
+2. ""Total cholesterol is 5.8 mmol/L, slightly above normal range, LDL is 3.2 mmol/L, slightly above normal level."""
+V16,vertical,王五的基本信息是什么（年龄、职业、婚姻状况）？,agent -> call_tools -> grade_documents -> generate,retrieve,1,0,true,not_supported_by_evidence,0.5393,0.5393,1.0000,1. 保持正常体重: 李四六目前的体重指数在健康范围内，目标是保持这一体重，避免肥胖 相关健康问题。 2. 管理血脂水平: 将总胆固醇和低密度脂蛋白（LDL）水平控制在正常范围内，以降低心血 管疾病风险。 3. 预防糖尿病: 通过健康的饮食和生活方式，避免未来糖尿病的发生。 健康档案 一、基本信息 患者姓名为王五，男性，出生于 1978 年 12 月 2 日，目前 45 岁，已婚，职业为银行经理。 王五的血型为 B 型，他的联系电话为 136-1234-8765，电子邮箱为 wangwu@example.com， 居 住 地 址 为 广 州 市 天 河 区 体 育 东 路 789 号 。 紧 急 联 系 人 为 其 妻 子 赵 六 ， 联 系 电 话 为 136-8765-1234。 二、医疗历史 王五的医疗历史包括以下内容： 既往病史: 2008 年: 王五因高血压开始服用降压药，至今一直在用药，血压控制良好。 2012 年: 被诊断为胃溃疡，接受了抗溃疡治疗，病情得到控制，目前通过饮食调理保持 胃部健康。 2016 年: 由于腰椎间盘突出，接受了保守治疗，症状缓解，目前通过定期锻炼,true,not_supported_by_evidence,6630.54,"Wang Wu is a 45-year-old married male who works as a bank manager.
+
+Evidence:
+- ""患者姓名为王五，男性，出生于 1978 年 12 月 2 日，目前 45 岁，已婚，职业为银行经理。""
+- ""目前 45 岁，已婚，职业为银行经理。"""
+V17,vertical,对比张三九和李四六：谁的糖尿病风险更高？依据档案说明原因。,agent -> call_tools -> grade_documents -> generate,"retrieve,retrieve",1,1,false,supported_by_evidence,0.6684,0.6684,0.0000,用药。 2018 年: 李四六在怀孕期间被诊断为妊娠糖尿病，产后血糖水平恢复正常，但仍需定期 监测血糖。 2020 年: 李四六在一次例行体检中发现胆固醇偏高，医生建议她通过饮食控制和增加运 动来管理胆固醇水平。 手术史: 李四六无重大手术史。 过敏史: 药物过敏: 李四六对阿司匹林过敏，曾出现皮疹和轻度呼吸困难。 食物过敏: 李四六对坚果过敏，食用后会导致口腔肿胀和皮肤发痒。 家族病史: 父亲: 高血压和冠心病。 母亲: 无重大疾病史。 三、生活方式和习惯 李四六的生活方式健康，饮食习惯以清淡为主，平时注重均衡摄入蔬菜、水果和蛋白质，少 食高脂肪和高糖食物。 李四六保持每周三次的有氧运动，如跑步和瑜伽，每次约 45 分钟。 她没有吸烟史，也很少饮酒，仅在社交场合偶尔饮用少量红酒。 李四六的睡眠质量较好，每 晚平均睡眠时间为 7 至 8 小时。 四、体检与化验结果 李四六最近一次体检是在 2024 年 7 月 20 日，结果显示她的身高为 162 厘米，体重为 58 公斤，体重指数（BMI）为 22.1，处于正常范围内。 她的血压为 120/75 毫米汞柱，属于正 常范围，心率为每分钟,false,supported_by_evidence,6240.87,"I cannot determine who has a higher diabetes risk between Zhang Sanjiu and Li Sixiu because the records do not contain information about Zhang Sanjiu's health condition.
+
+Evidence:
+- ""I cannot find this information in the records."""
+V18,vertical,对比张三九和李四六：谁的心血管风险更高？依据档案说明原因。,agent -> call_tools -> grade_documents -> generate,retrieve,1,1,false,supported_by_evidence,0.7064,0.7064,0.0000,他的腰围为 92 厘米，略高于健康范围。 血压测量结果为 135/85 毫米汞柱，属于轻度高血压范围。 心率为每分钟 78 次，处于正常 范围。 在实验室检查中，张三九的空腹血糖为 6.8 毫摩尔/升，略高于正常范围； 餐后 2 小时血糖 为 8.9 毫摩尔/升，也高于正常标准。 血脂检查结果显示，总胆固醇为 5.2 毫摩尔/升，处于 正常范围，甘油三酯为 1.8 毫摩尔/升，略高于正常，低密度脂蛋白（LDL）为 3.4 毫摩尔/ 升，略高。 肝功能检查显示，谷丙转氨酶（ALT）和谷草转氨酶（AST）的水平正常，分别 为 28 和 25 单位/升。 肾功能检查显示，肌酐、尿素和尿酸水平均处于正常范围内。 其他检查结果中，心电图显示张三九的心脏功能正常，未发现异常心律。 胸片检查结果显示 其肺部和胸腔无异常，腹部超声检查显示脂肪肝轻度增加，但未发现其他异常。 五、健康风险评估 根据张三九的健康档案及最新体检结果，存在以下健康风险： 1. 心血管疾病风险: 由于血压偏高和血脂异常，张三九存在较高的心血管疾病风险。 建议 进一步控制血压和血脂水平。 2. 糖尿病管理不足: 张三九的血糖控制不,false,supported_by_evidence,7546.24,"Based on the records, Zhang Sanjiu has a higher cardiovascular risk compared to Li Sixiu. Zhang Sanjiu has slightly elevated blood pressure and abnormal lipid levels, which contribute to a higher risk of cardiovascular diseases. In contrast, Li Sixiu maintains a normal blood pressure and has a healthier lifestyle with regular exercise.
+
+Evidence:
+1. ""Zhang Sanjiu has a higher cardiovascular disease risk due to elevated blood pressure and abnormal lipid levels.""
+2. ""Li Sixiu's blood pressure is 120/75 mmHg, within the normal range.""
+3. ""Li Sixiu maintains a healthy lifestyle, with weekly aerobic exercises such as running and yoga."""
+V19,vertical,档案里是否提到高血压的管理或用药？请总结记录到的内容。,agent -> call_tools -> grade_documents -> generate,retrieve,1,0,true,not_supported_by_evidence,0.5038,0.5038,1.0000,他的腰围为 92 厘米，略高于健康范围。 血压测量结果为 135/85 毫米汞柱，属于轻度高血压范围。 心率为每分钟 78 次，处于正常 范围。 在实验室检查中，张三九的空腹血糖为 6.8 毫摩尔/升，略高于正常范围； 餐后 2 小时血糖 为 8.9 毫摩尔/升，也高于正常标准。 血脂检查结果显示，总胆固醇为 5.2 毫摩尔/升，处于 正常范围，甘油三酯为 1.8 毫摩尔/升，略高于正常，低密度脂蛋白（LDL）为 3.4 毫摩尔/ 升，略高。 肝功能检查显示，谷丙转氨酶（ALT）和谷草转氨酶（AST）的水平正常，分别 为 28 和 25 单位/升。 肾功能检查显示，肌酐、尿素和尿酸水平均处于正常范围内。 其他检查结果中，心电图显示张三九的心脏功能正常，未发现异常心律。 胸片检查结果显示 其肺部和胸腔无异常，腹部超声检查显示脂肪肝轻度增加，但未发现其他异常。 五、健康风险评估 根据张三九的健康档案及最新体检结果，存在以下健康风险： 1. 心血管疾病风险: 由于血压偏高和血脂异常，张三九存在较高的心血管疾病风险。 建议 进一步控制血压和血脂水平。 2. 糖尿病管理不足: 张三九的血糖控制不,true,not_supported_by_evidence,6617.08,"The records mention the management of hypertension by advising the patient to continue taking antihypertensive medication as prescribed by the doctor. Regular monitoring of blood pressure is also recommended.
+
+Evidence:
+1. ""建议张三九继续遵医嘱服用降压药和降糖药，定期监测血压和血糖水平。""
+2. ""血压测量结果为 135/85 毫米汞柱，属于轻度高血压范围。""
+3. ""将血压控制在 120/80 毫米汞柱以下，以降低心血管疾病风险。"""
+V20,vertical,健康档案里有哪些信息缺失或无法找到？请列出未找到的字段。,agent -> call_tools -> grade_documents -> rewrite -> agent -> call_tools -> grade_documents -> rewrite -> agent -> call_tools -> grade_documents -> rewrite -> agent -> call_tools -> grade_documents -> generate,"retrieve,retrieve,retrieve,retrieve",1,0,true,not_supported_by_evidence,0.3297,0.4363,1.0000,肝功能检查显示，谷丙转氨酶（ALT）为 18 单位/升，谷草转氨酶（AST）为 20 单位/升， 均处于正常范围。 肾功能检查结果显示，肌酐、尿素和尿酸水平均在正常范围内。 此外，李四六的心电图结果显示心律正常，未发现异常。 腹部超声检查未见肝脏或胆囊的明 显异常，肾脏形态正常。 五、健康风险评估 根据李四六的健康档案和最近的体检结果，存在以下健康风险： 1. 心血管疾病风险: 李四六的胆固醇水平偏高，尤其是低密度脂蛋白（LDL），这增加了她 患心血管疾病的风险。 建议继续通过饮食和运动管理胆固醇水平。 2. 潜在糖尿病风险: 虽然李四六目前血糖水平正常，但考虑到她曾有妊娠糖尿病史，未来 可能存在糖尿病风险，建议定期监测血糖。 六、医生建议 1. 胆固醇管理: 建议李四六进一步减少饮食中饱和脂肪和反式脂肪的摄入，增加富含纤维 的食物，如全谷物、蔬菜和水果，并继续保持定期运动习惯，以帮助降低胆固醇水平。 2. 糖尿病预防: 建议李四六定期进行空腹血糖和糖化血红蛋白（HbA1c）检查，尤其是在 体重增加或生活方式改变时，以便及早发现潜在的糖尿病问题。 3. 保持健康生活方式: 李四六应继续,true,not_supported_by_evidence,29641.65,"The health records provided lack specific information on certain fields. These missing fields include:
+
+1. Detailed family medical history for Li Sixi and Wang Wu.
+2. Specific cholesterol levels for Li Sixi and Wang Wu.
+3. Any history of surgeries for Wang Wu.
+4. Specific lifestyle and dietary habits for Li Sixi and Wang Wu.
+5. Any additional allergies for Wang Wu.
+
+Evidence:
+- ""I cannot find this information in the records.""
+- ""手术史: 李四六无重大手术史."" (No information about Wang Wu's surgeries)
+- ""李四六的医疗历史包括以下内容：既往病史: 2015 年: 李四六因甲状腺功能亢进接受了抗甲状腺药物治疗..."" (No detailed family history for Li Sixi)"

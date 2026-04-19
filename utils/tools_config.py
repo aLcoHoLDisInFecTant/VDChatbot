@@ -22,12 +22,12 @@ def get_tools(llm_embedding):
         embedding_function=llm_embedding,
     )
     # 将向量存储转换为检索器
-    retriever = vectorstore.as_retriever()
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
     # 创建检索工具
     retriever_tool = create_retriever_tool(
         retriever,
         name="retrieve",
-        description="这是健康档案查询工具，搜索并返回有关用户的健康档案信息。"
+        description="This is a document retrieval tool. It searches the local document knowledge base (e.g., health records and technical papers) and returns relevant passages."
     )
 
 
